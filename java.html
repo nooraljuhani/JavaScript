@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+	</script>
+	<title></title>
+</head>
+<body>
+<div id="Java">What is JavaScript
+<br>
+
+<ul>
+	<li class="a1">Server side</li>
+	<li id="c">Client side</li>
+	<li class="a1">both side</li>
+	<li class="a1">fries and coke</li>
+</ul>
+</div>
+<button id="show">Show answer</button><br>
+<div>
+    <select>
+        <option>Country</option>
+        <option value="Jo">Jordan</option>
+        <option value="us">USa</option>
+    </select>
+</div>
+<div class="JO1" >
+	<select>
+		<option>City</option>
+		<option>Amaan</option>
+	</select>
+</div>
+<div class="US1">
+	<select>
+		<option>State</option>
+		<option>NY</option>
+	</select>
+</div>
+<div class="US1">
+	<select>
+		<option>Zib Code</option>
+		<option>11111</option>
+	</select>
+</div>
+<script>
+
+
+
+	
+$("#show").click(function(){
+$(".a1").css("color","red");
+$("#c").css("color","green");
+});
+
+ 
+
+ $(document).ready(function(){
+   $("select").change(function(){
+      $( "select option:selected").each(function(){
+                if($(this).attr("value")=="Jo"){
+                    $(".US1").hide();
+                    $(".JO1").show();
+                }
+                if($(this).attr("value")=="us"){
+                    $(".JO1").hide();
+                    $(".US1").show();
+                }
+          
+            });
+        }).change();
+    });
+
+
+
+</script>
+</body>
+</html>
